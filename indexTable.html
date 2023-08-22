@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="tabelContainer" class="container d-flex justify-content-center align-items-center"></div>
+    <script>
+      var container = document.getElementById('tabelContainer');
+
+      function buatTabel(par) {
+        var turun = document.createElement('tr');
+        for (var i = 0; i < 30; i++) {
+          var datar = document.createElement('td');
+          datar.style.border = '1px solid black';
+          datar.style.width = '7px';
+          datar.style.height = '7px';
+          datar.id = `table${par}${i}`;
+          datar.classList.add('table');
+          turun.appendChild(datar);
+        }
+        return turun;
+      }
+
+      function masukanBaris() {
+        var table = document.createElement('table');
+        var container = document.getElementById('tabelContainer');
+
+        for (var i = 0; i < 30; i++) {
+          table.appendChild(buatTabel(i));
+        }
+        return container.appendChild(table);
+      }
+
+      masukanBaris();
+
+      const changeBackground = (par) => {
+        const coba = document.getElementById(par);
+        coba.style.backgroundColor = 'red';
+      };
+      const timeOut = (par1, time) => {
+        setTimeout(() => {
+          changeBackground(par1);
+        }, time * 100);
+      };
+
+      // i
+      timeOut('table01', 6);
+      timeOut('table11', 7);
+      timeOut('table21', 9);
+      timeOut('table31', 10);
+      timeOut('table41', 11);
+
+      // love
+      // L
+      timeOut('table04', 12);
+      timeOut('table14', 13);
+      timeOut('table24', 14);
+      timeOut('table34', 15);
+      timeOut('table44', 16);
+      timeOut('table45', 17);
+      timeOut('table46', 18);
+      //o
+      timeOut('table08', 19);
+      timeOut('table18', 20);
+      timeOut('table28', 21);
+      timeOut('table38', 22);
+      timeOut('table48', 23);
+      timeOut('table49', 24);
+      timeOut('table410', 25);
+      timeOut('table411', 26);
+      timeOut('table311', 27);
+      timeOut('table211', 28);
+      timeOut('table111', 29);
+      timeOut('table011', 30);
+      timeOut('table010', 31);
+      timeOut('table09', 32);
+      // v
+      timeOut('table013', 33);
+      timeOut('table113', 34);
+      timeOut('table213', 35);
+      timeOut('table313', 36);
+      timeOut('table414', 37);
+      timeOut('table415', 38);
+      timeOut('table316', 39);
+      timeOut('table216', 40);
+      timeOut('table116', 41);
+      timeOut('table016', 42);
+      // E
+      timeOut('table020', 43);
+      timeOut('table019', 44);
+      timeOut('table018', 45);
+      timeOut('table118', 46);
+      timeOut('table218', 47);
+      timeOut('table219', 48);
+      timeOut('table220', 49);
+      timeOut('table318', 50);
+      timeOut('table418', 51);
+      timeOut('table419', 52);
+      timeOut('table420', 53);
+
+      // U
+      timeOut('table023', 54);
+      timeOut('table123', 55);
+      timeOut('table223', 56);
+      timeOut('table323', 57);
+      timeOut('table423', 58);
+      timeOut('table424', 59);
+      timeOut('table425', 60);
+      timeOut('table426', 61);
+      timeOut('table326', 62);
+      timeOut('table226', 63);
+      timeOut('table126', 64);
+      timeOut('table026', 65);
+    </script>
+  </body>
+</html>
